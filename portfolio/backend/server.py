@@ -40,6 +40,7 @@ class Project(BaseModel):
     tech_used: List[str]
     challenge: str
     outcome: str
+    duration: str
     image_url: Optional[str] = None
 
 class Education(BaseModel):
@@ -54,127 +55,114 @@ class Certification(BaseModel):
     issuer: str
     description: Optional[str] = None
 
-# Sample data for Harish Kumar
+# Updated portfolio data for Harish Kumar
 portfolio_data = {
     "personal_info": {
         "name": "Harish Kumar",
-        "title": "Aspiring Data Science and AI Generalist",
+        "title": "Aspiring Data Science & AI Enthusiast | Learning Python, SQL, Machine Learning & Power BI",
         "tagline": "Driven by Data. Powered by Purpose.",
-        "about": "An aspiring Data Science and AI Generalist with a strong academic foundation in Economics and Information Technology. Currently pursuing A-Level IT certification from NIELIT to deepen technical expertise. Passionate about leveraging analytical skills, machine learning, and digital technologies to solve complex real-world problems and drive data-driven decision making.",
+        "about": "Aspiring Data Science & AI Enthusiast with a strong academic foundation in Economics. Currently learning Python, SQL, Machine Learning & Power BI to transition into data-driven roles. Passionate about leveraging analytical skills and cutting-edge technologies to solve real-world problems through data insights and artificial intelligence.",
         "email": "mr.harishgrewal514@gmail.com",
         "phone": "9805877514",
-        "linkedin": "https://www.linkedin.com/in/harish-kumar-a912a5354/",
-        "soft_skills": ["Problem-solving", "Attention to detail", "Adaptability", "Analytical Thinking", "Communication"]
+        "linkedin": "https://www.linkedin.com/in/harish044",
+        "github": "https://github.com/Harry044",
+        "naukri": "https://www.naukri.com/mnjuser/profile?id=&altresid",
+        "soft_skills": ["Analytical Thinking", "Problem Solving", "Data Analysis", "Research Skills", "Communication"]
     },
     "skills": [
         {
-            "category": "Data Science Tools",
-            "skills": ["Python", "MS Excel (Advanced)", "Data Analysis", "Statistical Analysis", "Machine Learning", "Data Visualization"]
+            "category": "Data & Analytics Tools",
+            "skills": ["Power BI Desktop", "MySQL", "Advanced Excel", "Data Visualization", "Statistical Analysis"]
         },
         {
-            "category": "AI & Tech Skills", 
-            "skills": ["Artificial Intelligence", "HTML", "CSS", "JavaScript", "Database Management", "Research Methods"]
+            "category": "Programming Languages", 
+            "skills": ["Python", "C++ Object Oriented Programming", "SQL", "Arduino IDE"]
         },
         {
-            "category": "Soft Skills",
-            "skills": ["Analytical Thinking", "Problem Solving", "Communication", "Project Management", "Critical Thinking", "Attention to Detail"]
+            "category": "Core Competencies",
+            "skills": ["Machine Learning", "Data Science", "Economic Analysis", "Research Methods", "Project Management"]
         }
     ],
     "projects": [
         {
             "id": str(uuid.uuid4()),
-            "title": "Data Entry Automation in Excel",
-            "description": "Developed automated Excel macros to streamline data entry processes, reducing manual work by 70%",
-            "tech_used": ["MS Excel", "VBA", "Python"],
-            "challenge": "Manual data entry was time-consuming and error-prone",
-            "outcome": "Increased efficiency by 70% and reduced errors by 90%"
+            "title": "Power Monitoring System",
+            "description": "Developed a comprehensive Power Monitoring System using Arduino IDE, ESP8266 and C++ to monitor electrical power consumption. Integrated sensors and real-time data visualization for accurate analysis.",
+            "tech_used": ["Arduino IDE", "ESP8266", "C++", "Sensors", "Real-time Data Visualization"],
+            "challenge": "Creating an accurate and real-time power monitoring solution with proper data visualization",
+            "outcome": "Successfully developed a working power monitoring system with real-time analysis capabilities",
+            "duration": "Jun 2024 - Aug 2024"
         },
         {
             "id": str(uuid.uuid4()),
-            "title": "Portfolio Website Development",
-            "description": "Created a responsive portfolio website using modern web technologies",
-            "tech_used": ["HTML", "CSS", "JavaScript", "React"],
-            "challenge": "Creating a professional online presence",
-            "outcome": "Professional website showcasing skills and projects"
+            "title": "Economic Data Analysis Project",
+            "description": "Comprehensive analysis of economic trends using advanced Excel and statistical methods",
+            "tech_used": ["Advanced Excel", "Statistical Analysis", "Data Visualization"],
+            "challenge": "Analyzing complex economic data to derive meaningful insights",
+            "outcome": "Generated actionable insights for economic trend analysis",
+            "duration": "Academic Project"
         }
     ],
     "education": [
         {
-            "degree": "A-Level IT (Currently Pursuing)",
-            "institution": "NIELIT Shimla",
-            "percentage": "In Progress",
-            "year": "2025",
-            "achievement": "Advanced IT certification program"
-        },
-        {
-            "degree": "MA in Economics",
-            "institution": "Vallabh Govt. College, Mandi (Sardar Patel University)",
-            "percentage": "65%",
-            "year": "2023",
+            "degree": "M.A Economics",
+            "institution": "Sardar Patel University (SPU)",
+            "percentage": "Full Time",
+            "year": "2022-2024",
             "achievement": None
         },
         {
-            "degree": "BA in Economics",
-            "institution": "Govt. College Bassa",
-            "percentage": "80%", 
-            "year": "2021",
+            "degree": "B.A Economics",
+            "institution": "Govt. College Bassa (Gohar)",
+            "percentage": "Full Time", 
+            "year": "2019-2022",
             "achievement": None
         },
         {
-            "degree": "O-Level IT",
-            "institution": "NIELIT Shimla",
-            "percentage": "73%",
-            "year": "2020",
-            "achievement": "IT Certification"
-        },
-        {
-            "degree": "Higher Secondary Certificate (HSC)",
-            "institution": "Government School",
+            "degree": "Class XII",
+            "institution": "Himachal Pradesh Board",
             "percentage": "88%",
             "year": "2019",
-            "achievement": "Awarded laptop scholarship for academic excellence"
+            "achievement": "State Merit Award - Academic Excellence with brand-new laptop"
+        },
+        {
+            "degree": "Class X",
+            "institution": "Himachal Pradesh Board",
+            "percentage": None,
+            "year": "2017",
+            "achievement": None
         }
     ],
     "certifications": [
         {
-            "name": "Advanced MS Excel",
-            "issuer": "NSIC",
-            "description": "Advanced Excel functions, macros, and data analysis"
+            "name": "NIELIT Certification Program",
+            "issuer": "National Institute of Electronics & Information Technology (NIELIT)",
+            "description": "Mandi Himachal Pradesh (Offsite) - Advanced IT and Electronics certification"
         },
         {
-            "name": "Financial Literacy",
-            "issuer": "NSE Academy", 
-            "description": "Financial markets and investment principles"
+            "name": "State Merit Award - Academic Excellence",
+            "issuer": "Government of Himachal Pradesh", 
+            "description": "Recognized for securing 88% in Class 12 Board Exams (2019). Award included a brand-new laptop."
         },
         {
-            "name": "CyberShikshaa Fundamentals",
-            "issuer": "CyberShikshaa",
-            "description": "Cybersecurity fundamentals and best practices"
+            "name": "Power BI Fundamentals",
+            "issuer": "Self-Learning",
+            "description": "Currently learning Power BI Desktop for data visualization and analytics"
         },
         {
-            "name": "Course on Computer Concepts",
-            "issuer": "NIELIT",
-            "description": "Basic computer concepts and applications"
+            "name": "Python Programming",
+            "issuer": "Self-Learning",
+            "description": "Learning Python programming for data science and machine learning applications"
         },
         {
-            "name": "Python for Data Science",
-            "issuer": "Online Learning Platform",
-            "description": "Python programming for data analysis and machine learning"
+            "name": "MySQL Database Management",
+            "issuer": "Self-Learning",
+            "description": "Database design, management, and query optimization"
         },
         {
-            "name": "Data Analysis with Excel",
-            "issuer": "Microsoft",
-            "description": "Advanced data analysis techniques using Excel"
-        },
-        {
-            "name": "Introduction to Artificial Intelligence",
-            "issuer": "Coursera",
-            "description": "Fundamentals of AI and machine learning concepts"
-        },
-        {
-            "name": "Statistical Analysis Fundamentals",
-            "issuer": "Statistics Institute",
-            "description": "Statistical methods for data science applications"
+            "name": "Machine Learning Fundamentals",
+            "issuer": "Self-Learning",
+            "description": "Understanding core concepts of machine learning and AI"
         }
     ]
 }

@@ -16,7 +16,11 @@ const Hero = () => {
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://www.linkedin.com/in/harish-kumar-a912a5354/', '_blank');
+    window.open('https://www.linkedin.com/in/harish044', '_blank');
+  };
+
+  const handleGitHubClick = () => {
+    window.open('https://github.com/Harry044', '_blank');
   };
 
   return (
@@ -34,8 +38,8 @@ const Hero = () => {
               Hi, I'm <span className="text-olive-green">Harish Kumar</span>
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-blue-100 mb-6 animate-slide-up font-light" style={{animationDelay: '0.2s'}}>
-              Aspiring Data Science and AI Generalist
+            <h2 className="text-lg md:text-xl text-blue-100 mb-6 animate-slide-up font-light leading-relaxed" style={{animationDelay: '0.2s'}}>
+              Aspiring Data Science & AI Enthusiast | Learning Python, SQL, Machine Learning & Power BI
             </h2>
             
             <p className="text-lg text-blue-100 mb-8 animate-slide-up leading-relaxed" style={{animationDelay: '0.4s'}}>
@@ -43,8 +47,8 @@ const Hero = () => {
             </p>
 
             <p className="text-base md:text-lg text-blue-200 mb-10 animate-slide-up leading-relaxed max-w-2xl" style={{animationDelay: '0.6s'}}>
-              Passionate about leveraging analytical skills and digital tools to solve real-world problems. 
-              With expertise in Microsoft Excel, Python, and web technologies, I bring economic insight and technical proficiency to every project.
+              Aspiring Data Science & AI Enthusiast with a strong academic foundation in Economics. 
+              Currently learning cutting-edge technologies to transition into data-driven roles and solve real-world problems through data insights.
             </p>
             
             {/* Action Buttons */}
@@ -53,19 +57,25 @@ const Hero = () => {
                 onClick={handleDownloadResume}
                 className="bg-olive-green text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
               >
-                View Resume
+                📄 View Resume
               </button>
               <button
                 onClick={handleContactClick}
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-deep-blue transition-all duration-300 hover:transform hover:scale-105"
               >
-                Contact Me
+                📞 Contact Me
               </button>
               <button
                 onClick={handleLinkedInClick}
-                className="bg-digital-crimson text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
               >
-                LinkedIn
+                💼 LinkedIn
+              </button>
+              <button
+                onClick={handleGitHubClick}
+                className="bg-gray-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-900 transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
+              >
+                🚀 GitHub
               </button>
             </div>
           </div>

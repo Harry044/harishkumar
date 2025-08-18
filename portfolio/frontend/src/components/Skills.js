@@ -3,22 +3,22 @@ import React from 'react';
 const Skills = () => {
   const skillsData = [
     {
-      category: "Data Science Tools",
-      skills: ["Python", "MS Excel (Advanced)", "Data Analysis", "Statistical Analysis", "Machine Learning", "Data Visualization"],
+      category: "Data & Analytics Tools",
+      skills: ["Power BI Desktop", "MySQL", "Advanced Excel", "Data Visualization", "Statistical Analysis"],
       icon: "📊",
       color: "bg-deep-blue",
       textColor: "text-deep-blue"
     },
     {
-      category: "AI & Tech Skills",
-      skills: ["Artificial Intelligence", "HTML", "CSS", "JavaScript", "Database Management", "Research Methods"],
-      icon: "🤖",
+      category: "Programming Languages",
+      skills: ["Python", "C++ Object Oriented Programming", "SQL", "Arduino IDE"],
+      icon: "💻",
       color: "bg-olive-green",
       textColor: "text-olive-green"
     },
     {
-      category: "Soft Skills", 
-      skills: ["Analytical Thinking", "Problem Solving", "Communication", "Project Management", "Critical Thinking", "Attention to Detail"],
+      category: "Core Competencies", 
+      skills: ["Machine Learning", "Data Science", "Economic Analysis", "Research Methods", "Project Management"],
       icon: "🧠",
       color: "bg-digital-crimson",
       textColor: "text-digital-crimson"
@@ -47,7 +47,7 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-olive-green mx-auto mb-8"></div>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-            A comprehensive toolkit for data analysis, web development, and problem-solving
+            Currently learning cutting-edge technologies in Data Science, AI, and Analytics
           </p>
         </div>
 
@@ -81,19 +81,19 @@ const Skills = () => {
                 ))}
               </div>
 
-              {/* Skill Level Indicator */}
+              {/* Learning Status */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-gray-600">Proficiency</span>
+                  <span className="text-sm font-medium text-gray-600">Learning Status</span>
                   <span className="text-sm font-medium text-gray-800">
-                    {index === 0 ? "Advanced" : index === 1 ? "Intermediate" : "Expert"}
+                    {index === 0 ? "Intermediate" : index === 1 ? "Learning" : "Advanced"}
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
                     className={`h-2 rounded-full ${category.color} transition-all duration-1000 ease-out`}
                     style={{
-                      width: index === 0 ? "90%" : index === 1 ? "75%" : "95%"
+                      width: index === 0 ? "75%" : index === 1 ? "60%" : "85%"
                     }}
                   ></div>
                 </div>
@@ -102,25 +102,31 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills Section */}
+        {/* Learning Journey Section */}
         <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Additional Competencies
+            🚀 Currently Learning
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Data Entry", level: "Expert", icon: "⌨️" },
-              { name: "Financial Analysis", level: "Advanced", icon: "💰" },
-              { name: "Report Writing", level: "Advanced", icon: "📝" },
-              { name: "Team Collaboration", level: "Expert", icon: "🤝" }
+              { name: "Machine Learning", progress: "60%", icon: "🤖" },
+              { name: "Python Programming", progress: "70%", icon: "🐍" },
+              { name: "Power BI", progress: "65%", icon: "📊" },
+              { name: "SQL Database", progress: "75%", icon: "🗃️" }
             ].map((skill, index) => (
               <div
                 key={index}
                 className="text-center p-4 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-300"
               >
                 <div className="text-3xl mb-2">{skill.icon}</div>
-                <h4 className="text-white font-semibold mb-1">{skill.name}</h4>
-                <span className="text-olive-green text-sm font-medium">{skill.level}</span>
+                <h4 className="text-white font-semibold mb-2">{skill.name}</h4>
+                <div className="w-full bg-white/30 rounded-full h-2 mb-1">
+                  <div 
+                    className="h-2 rounded-full bg-olive-green transition-all duration-1000 ease-out"
+                    style={{width: skill.progress}}
+                  ></div>
+                </div>
+                <span className="text-olive-green text-sm font-medium">{skill.progress}</span>
               </div>
             ))}
           </div>
