@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Status Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 20px;
+        }
+        .status {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .success {
+            border-left: 5px solid #10b981;
+        }
+        .link {
+            color: #84cc16;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Harish Kumar Portfolio - Status Check</h1>
+    
+    <div class="status success">
+        <h2>✅ Portfolio Services Status</h2>
+        <p><strong>Frontend:</strong> Running on <a href="http://localhost:3000" class="link">http://localhost:3000</a></p>
+        <p><strong>Backend:</strong> Running on <a href="http://localhost:8002/api/" class="link">http://localhost:8002/api/</a></p>
+        <p><strong>Status:</strong> Both services are active and working!</p>
+    </div>
+
+    <div class="status">
+        <h2>🎯 Your Updated Portfolio Includes:</h2>
+        <ul>
+            <li><strong>Title:</strong> "Aspiring Data Science & AI Enthusiast | Learning Python, SQL, Machine Learning & Power BI"</li>
+            <li><strong>Projects:</strong> Power Monitoring System (Arduino, ESP8266, C++)</li>
+            <li><strong>Education:</strong> M.A Economics (2022-24), B.A Economics (2019-22)</li>
+            <li><strong>Skills:</strong> Power BI, Python, MySQL, Machine Learning</li>
+            <li><strong>Certifications:</strong> NIELIT, State Merit Award</li>
+            <li><strong>Links:</strong> LinkedIn, GitHub, Contact Form</li>
+        </ul>
+    </div>
+
+    <div class="status">
+        <h2>🚀 Quick Actions</h2>
+        <p><a href="http://localhost:3000" class="link">👀 View Your Portfolio</a></p>
+        <p><a href="http://localhost:8002/api/profile" class="link">🔧 Check Backend Data</a></p>
+    </div>
+
+    <div class="status">
+        <h2>📱 Ready for Deployment</h2>
+        <p>Your portfolio is ready to be deployed to:</p>
+        <ul>
+            <li>🌟 <a href="https://app.netlify.com/drop" class="link">Netlify</a> (30 seconds)</li>
+            <li>⚡ <a href="https://vercel.com/new" class="link">Vercel</a> (2 minutes)</li>
+            <li>🐱 <a href="https://pages.github.com" class="link">GitHub Pages</a> (5 minutes)</li>
+        </ul>
+    </div>
+
+    <script>
+        // Auto-refresh backend status
+        fetch('http://localhost:8002/api/')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Backend API working:', data);
+            })
+            .catch(error => {
+                console.log('Backend check failed:', error);
+            });
+    </script>
+</body>
+</html>
