@@ -134,7 +134,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <span className="text-olive-green">🔗</span>
                 <a 
-                  href="https://www.linkedin.com/in/harishkumar044"
+                  href="https://www.linkedin.com/in/harish-kumar-a912a5354/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
