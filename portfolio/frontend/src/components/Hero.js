@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://www.linkedin.com/in/harishkumar044', '_blank');
+    window.open('https://www.linkedin.com/in/harish-kumar-a912a5354/', '_blank');
   };
 
   return (
